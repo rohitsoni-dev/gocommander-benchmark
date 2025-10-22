@@ -1,0 +1,38 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      commander:
+        specifier: ^14.0.1
+        version: 14.0.1
+      gocommander:
+        specifier: ^1.0.1
+        version: 1.0.1
+
+packages:
+
+  commander@14.0.1:
+    resolution: {integrity: sha512-2JkV3gUZUVrbNA+1sjBOYLsMZ5cEEl8GTFP2a4AVz5hvasAMCQ1D2l2le/cX+pV4N6ZU17zjUahLpIXRrnWL8A==}
+    engines: {node: '>=20'}
+
+  gocommander@1.0.1:
+    resolution: {integrity: sha512-WUqoJnal2DsQFzAUqEsPk1j1Cb2KzwjOnVMCMdnM4hH6VE3kk6n79a5NqIDhiB05VpoJc82mzyxPesWE3UR7Jw==}
+
+  node-addon-api@7.1.1:
+    resolution: {integrity: sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==}
+
+snapshots:
+
+  commander@14.0.1: {}
+
+  gocommander@1.0.1:
+    dependencies:
+      node-addon-api: 7.1.1
+
+  node-addon-api@7.1.1: {}
