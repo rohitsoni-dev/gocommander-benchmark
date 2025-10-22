@@ -1,6 +1,6 @@
 # GoCommander vs Commander.js Performance Benchmark
 
-This repository contains performance benchmarks comparing [GoCommander](https://github.com/abdfnx/gocommander) and [commander.js](https://github.com/tj/commander.js), two popular CLI framework libraries for Node.js.
+This repository contains performance benchmarks comparing [GoCommander](https://github.com/rohitsoni-dev/gocommander) and [commander.js](https://github.com/tj/commander.js), two popular CLI framework libraries for Node.js.
 
 ## Latest Results
 
@@ -33,7 +33,7 @@ benchmarks/
   ├── argumentParsing.js          # Argument parsing benchmark
   ├── helpGeneration.js           # Help generation benchmark
   ├── largeCommandTree.js         # Large command tree benchmark
-  ├── complexOptions.js           # Complex options parsing benchmark
+  ├── complexOptions.js          # Complex options parsing benchmark
   ├── startupTime.js              # Startup time benchmark
   ├── actionExecution.js          # Action execution benchmark
   ├── validationPerformance.js    # Validation performance benchmark
@@ -69,25 +69,19 @@ The benchmarks were conducted using Node.js's built-in `performance` API to meas
 
 GoCommander demonstrates substantially better performance across all measured operations, with particularly strong advantages in:
 
+- **Startup Time**: 81% faster
 - **Command Creation**: 86% faster
 - **Argument Parsing**: 93% faster
+- **Help Generation**: 14% faster
+- **Large Command Tree Creation**: 93% faster
 - **Complex Options Parsing**: 98% faster
+- **Action Execution**: 84% faster
+- **Validation Performance**: 88% faster
+- **Subcommand Lookup**: 77% faster
+- **Concurrent Usage**: 85% faster
 - **Long-running Sessions**: 93% faster
+- **Complex Help Generation**: 55% faster
 - **Autocomplete Performance**: 97% faster
-
-### Additional Tests Results
-
-The additional tests we implemented show that GoCommander maintains its performance advantages across a wide range of scenarios:
-
-1. **Action Execution Performance**: GoCommander is 83.70% faster in setting up command actions
-2. **Validation Performance**: GoCommander is 87.83% faster in setting up custom validation functions
-3. **Subcommand Lookup Performance**: GoCommander is 76.77% faster in creating deeply nested subcommand structures
-4. **Concurrent Usage**: GoCommander is 85.32% faster when creating multiple command instances concurrently
-5. **Long-running Session Performance**: GoCommander is 93.00% faster in maintaining performance over extended usage periods
-6. **Complex Help Text Generation**: GoCommander is 55.09% faster in generating help for complex command structures
-7. **Autocomplete/Tab Completion Performance**: GoCommander is 96.71% faster in creating command structures for autocomplete functionality
-
-For applications where CLI performance is critical, GoCommander offers a compelling advantage across all tested scenarios.
 
 ## Running the Benchmarks
 
@@ -101,19 +95,7 @@ pnpm install
 pnpm benchmark
 ```
 
-## Additional Tests Performed
-
-We've implemented a comprehensive set of performance tests including all the additional tests you requested:
-
-1. **Action Execution Performance**: Benchmark actual command action execution rather than just setup
-2. **Validation Performance**: Test custom validation function performance
-3. **Subcommand Lookup Performance**: Measure performance with deeply nested subcommands
-4. **Concurrent Usage**: Test how each library performs under concurrent access patterns
-5. **Long-running Session Performance**: Measure performance degradation over extended usage periods
-6. **Help Text Generation Complexity**: Test help generation with more complex command structures
-7. **Autocomplete/Tab Completion Performance**: Test autocomplete generation performance
-
 ## Dependencies
 
-- [gocommander](https://github.com/abdfnx/gocommander) - A fast CLI framework for Node.js
+- [gocommander](https://github.com/rohitsoni-dev/gocommander) - A fast CLI framework for Node.js
 - [commander](https://github.com/tj/commander.js) - The popular CLI framework for Node.js
